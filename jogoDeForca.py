@@ -5,7 +5,7 @@ class JogoDeForca:
         url = 'https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt'
         r = requests.get(url, allow_redirects=True)
         if r.status_code==200:
-            self.content = str(r.content.decode()).split('\n')
+            self.content = str(r.content.decode()).lower().split('\n')
         else:
             print("Erro: ", r.status_code)
     
